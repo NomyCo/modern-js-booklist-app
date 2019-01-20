@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <title>MyBookList App</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+
+  <body>
+    <main>
+      <section id="wrapper" class="wrapper">
+        <h1 class="logo">
+          <i class="logo__icon fas fa-book-open"></i> My<span class="logo__text"
+            >Book</span
+          >List
+        </h1>
+
+        <form id="book-form" class="form">
+          <article class="field">
+            <h2 class="visually-hidden">Title Field</h2>
+
+            <label class="field__label" for="title-field">Title</label>
+            <input class="field__input" id="title-field" type="text" />
+          </article>
+
+          <article class="field">
+            <h2 class="visually-hidden">Author Field</h2>
+
+            <label class="field__label" for="author-field">Author</label>
+            <input class="field__input" id="author-field" type="text" />
+          </article>
+
+          <article class="field">
+            <h2 class="visually-hidden">ISBN Field</h2>
+
+            <label class="field__label" for="isbn-field">ISBN#</label>
+            <input class="field__input" id="isbn-field" type="number" />
+          </article>
+
+          <input type="submit" class="btn" value="Add Book" />
+        </form>
+
+        <table class="books-list">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>ISBN#</th>
+              <th></th>
+            </tr>
+          </thead>
+
+          <tbody id="book-list"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="index.js"></script>
+  </body>
+</html>
